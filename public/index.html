@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ada Study Programme | Information Server</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">INFORMATION SERVER</p>
+      <h1>Ada Study Programme</h1>
+      <p>A small demonstration server. Choose an endpoint to send a request and inspect its response.</p>
+      <span class="server-note">Server address: <code>http://localhost:3000</code></span>
+    </header>
+
+    <section class="panel">
+      <h2>Try an API route</h2>
+      <p class="muted">The buttons below call the server using relative URLs.</p>
+      <div class="button-grid">
+        <button data-method="GET" data-path="/api/courses">GET /api/courses</button>
+        <button data-method="GET" data-path="/api/status">GET /api/status</button>
+        <button data-method="GET" data-path="/api/headers">GET /api/headers</button>
+        <button data-method="POST" data-path="/api/subscribe">POST /api/subscribe</button>
+        <button data-method="GET" data-path="/api/admin">GET /api/admin</button>
+        <button data-method="GET" data-path="/api/stats">GET /api/stats</button>
+        <button class="secondary" data-method="GET" data-path="/this-page-does-not-exist">Try a missing page</button>
+      </div>
+    </section>
+
+    <section class="panel response-panel" aria-live="polite">
+      <div class="response-heading">
+        <h2>Response</h2>
+        <span id="response-status" class="status">Waiting for a request</span>
+      </div>
+      <pre id="response-output">Select one of the buttons above. The response status and body will appear here.</pre>
+    </section>
+
+    <footer>Assignment 8 · Node.js and Express 5</footer>
+  </main>
+</body>
+</html>
